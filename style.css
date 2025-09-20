@@ -1,0 +1,133 @@
+body{
+    background-color: hsl(216, 50%, 16%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-image: linear-gradient(to bottom ,hsl(213, 43%, 27%) ,hsl(215, 45%, 17%));
+    height: auto;
+    padding: 40px;
+    border-radius: 25px;
+    font-family: "Hanken Grotesk";
+    box-shadow: 0px 30px 40px 20px hsl(217, 54%, 11%)  ;
+}
+
+.image{
+    position: relative;
+}
+.image img{
+    border-radius: 15px;
+}
+
+.address h2{
+    color: white;
+    font-size: 35px;
+}
+
+.des{
+    width: auto;
+}
+
+.des p{
+    color: rgba(255, 255, 255, 0.427);
+    font-size:x-large;
+}
+
+.x{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+ .left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: hsl(178, 100%, 50%);
+    font-size: xx-large;
+}
+
+.left img{
+    margin-right: 10px;
+    height: 30px;
+}
+
+.right{
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    color:rgba(240, 248, 255, 0.671);
+     font-size: xx-large;
+}
+
+.right img{
+    margin-right: 10px;
+    height: 30px;
+}
+
+.creator{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.creator img{
+    height: 60px;
+    margin-right: 20px;
+   border: 2px solid white;
+   border-radius:30px;
+}
+
+.creator p span{
+    color: rgba(240, 248, 255, 0.671);
+}
+
+.creator p{
+    font-size: x-large;
+    color: white;
+    word-spacing: 4px;
+}
+
+.image::after {
+  content: ""; 
+  position: absolute;
+  inset: 0; 
+  background-color: rgba(0, 255, 255, 0.5); 
+  opacity: 0; 
+  transition: opacity 0.3s ease; 
+  border-radius: 10px; 
+}
+
+.image:hover::after {
+    cursor: pointer;
+  opacity: 1;
+}
+
+.address h2:hover , .creator p:hover{
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0; /* تملى الصندوق كله */
+  background-color: rgba(0, 255, 255, 0.5); /* لون شفاف */
+  opacity: 0; /* مخفية في الوضع العادي */
+  display: flex;
+  justify-content: center; /* تحط الحاجة في النص أفقياً */
+  align-items: center;     /* تحط الحاجة في النص عمودياً */
+  border-radius: 10px;
+  transition: opacity 0.3s ease;
+}
+
+.overlay .eye {
+  width: 60px; /* حجم أيقونة العين */
+}
+
+.image:hover .overlay {
+  opacity: 1; /* تظهر عند الـ hover */
+}
