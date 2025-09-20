@@ -114,20 +114,20 @@ body{
 
 .overlay {
   position: absolute;
-  inset: 0; /* تملى الصندوق كله */
-  background-color: rgba(0, 255, 255, 0.5); /* لون شفاف */
-  opacity: 0; /* مخفية في الوضع العادي */
+  inset: 0;
+  background-color: rgba(0, 255, 255, 0.5);
+  opacity: 0;
   display: flex;
-  justify-content: center; /* تحط الحاجة في النص أفقياً */
-  align-items: center;     /* تحط الحاجة في النص عمودياً */
+  justify-content: center; 
+  align-items: center;     
   border-radius: 10px;
   transition: opacity 0.3s ease;
 }
 
 .overlay .eye {
-  width: 60px; /* حجم أيقونة العين */
+  width: 60px;
 }
 
 .image:hover .overlay {
-  opacity: 1; /* تظهر عند الـ hover */
+  opacity: 1; 
 }
